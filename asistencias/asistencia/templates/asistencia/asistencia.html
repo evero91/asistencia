@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistencia</title>
+</head>
+<body>
+    <h1>Asistencia</h1>
+    {% for p in personas %}
+    <label for="check_{{ p.id }}">
+        <input type="checkbox" id="check_{{ p.id }}"> {{ p.nombre }} {{ p.apellido1 }} {{ p.apellido2|default:"" }}
+    </label>
+    <br>
+    {% endfor %}
+</body>
+</html>
